@@ -44,10 +44,8 @@ float movelightPos = 0.0f;
 GLfloat deltaTime = 0.0f;
 GLfloat lastFrame = 0.0f;
 float rot = 0.0f;
-float rot1 = 0.0f;
-float rot2 = 0.0f;
 bool activanim = false;
-bool active;
+bool anim;
 
 int main()
 {
@@ -61,7 +59,7 @@ int main()
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
     // Create a GLFWwindow object that we can use for GLFW's functions
-    GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "316156235_REPORTE9_GPO12", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "316156235_REPORTE10_GPO12", nullptr, nullptr);
 
     if (nullptr == window)
     {
@@ -105,11 +103,27 @@ int main()
 
 
     // Load models
+    //silla
     Model silla((char*)"Models/Silla/silla.obj");
+    Model silla2((char*)"Models/Silla/silla2.obj");
 
+    //Buro verde
     Model cuerpoBuro((char*)"Models/Buro/cuerpoBuro.obj");
     Model puertaDerBuro((char*)"Models/Buro/puertaDerBuro.obj");
     Model puertaIzqBuro((char*)"Models/Buro/puertaIzqBuro.obj");
+
+    //Buro2
+    Model cuerpoBuro2((char*)"Models/Buro2/cuerpoBuro2.obj");
+    Model cajon((char*)"Models/Buro2/cajon.obj");
+
+    //perchero
+    Model perchero((char*)"Models/Perchero/percheroMaya.obj");
+
+    //perchero
+    Model sillon((char*)"Models/Sillon/sillon.obj");
+
+    //casa
+    Model casa((char*)"Models/casa/casaCompleta.obj");
 
     glm::mat4 projection = glm::perspective(camera.GetZoom(), (float)SCREEN_WIDTH / (float)SCREEN_HEIGHT, 0.1f, 100.0f);
 
@@ -243,29 +257,62 @@ int main()
 
         // Draw the loaded model
 
-        // sillon
-        /*glm::mat4 model(1);
+        //casa
+        glm::mat4 model(1);
+        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        glBindVertexArray(VAO); 
+        casa.Draw(lightingShader);
+        
+        //silla
+        model = glm::mat4(1);
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         glBindVertexArray(VAO);
-        silla.Draw(lightingShader);*/
+        silla.Draw(lightingShader);
+        model = glm::mat4(1);
+        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        glBindVertexArray(VAO);
+        silla2.Draw(lightingShader);
+          
+        //Sillon
+        model = glm::mat4(1);
+        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        glBindVertexArray(VAO);
+        sillon.Draw(lightingShader);
 
+        //perchero
+        model = glm::mat4(1);
+        model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, -1.0f, 0.0f));
+        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        glBindVertexArray(VAO);
+        perchero.Draw(lightingShader);
 
-        glm::mat4 model(1);
+        //BURO2
+        model = glm::mat4(1);
+        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        glBindVertexArray(VAO);
+        cuerpoBuro2.Draw(lightingShader);
+        model = glm::mat4(1);
+        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        glBindVertexArray(VAO);
+        cajon.Draw(lightingShader);
+
+        //BuroVerde
+        /*glm::mat4 model(1);
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         glBindVertexArray(VAO);
         cuerpoBuro.Draw(lightingShader);
         model = glm::mat4(1);
-        model = glm::rotate(model, glm::radians(rot1), glm::vec3(0.0f, 1.0f, 0.0f));
+        model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, 1.0f, 0.0f));
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         glBindVertexArray(VAO);
         puertaDerBuro.Draw(lightingShader);
         model = glm::mat4(1);
-        model = glm::rotate(model, glm::radians(rot2), glm::vec3(0.0f, -1.0f, 0.0f));
+        model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, -1.0f, 0.0f));
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         glBindVertexArray(VAO);
-        puertaIzqBuro.Draw(lightingShader);
+        puertaIzqBuro.Draw(lightingShader);*/
 
-
+        
         glBindVertexArray(0);
 
 
@@ -318,47 +365,8 @@ void DoMovement()
         camera.ProcessKeyboard(RIGHT, deltaTime);
     }
 
-    if (activanim)
-    {
-        if (rot > -90.0f)
-            rot -= 0.1f;
-    }
 
-    /*if (keys[GLFW_KEY_R])
-    {
-        if (rot1 < 90.0f)
-        {
-            rot1 += 0.01f;
-        }
-
-    }
-
-    if (keys[GLFW_KEY_F])
-    {
-        if (rot1 > 0.0f)
-        {
-            rot1 -= 0.01f;
-        }
-
-    }
-
-    if (keys[GLFW_KEY_T])
-    {
-        if (rot2 < 90.0f)
-        {
-            rot2 += 0.01f;
-        }
-
-    }
-
-    if (keys[GLFW_KEY_G])
-    {
-        if (rot2 > 0.0f)
-        {
-            rot2 -= 0.01f;
-        }
-
-    }*/
+    
 
 }
 
@@ -411,6 +419,20 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
     if (keys[GLFW_KEY_N])
     {
         lightPos.y -= 1.0f;
+    }
+
+    if (keys[GLFW_KEY_O])
+    {
+        anim = !anim;
+        if (anim)
+        {
+            rot = -90.0f;
+
+        }
+        else
+        {
+            rot = 0.0f;
+        }
     }
 
 }
