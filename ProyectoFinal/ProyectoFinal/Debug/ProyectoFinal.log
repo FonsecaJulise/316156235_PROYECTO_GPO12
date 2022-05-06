@@ -1,9 +1,9 @@
 ﻿  316156235_REPORTE8_GPO12.cpp
-C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(220,30): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(444,17): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(445,17): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(449,21): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(450,21): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(452,13): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(453,13): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(223,30): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(453,17): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(454,17): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(458,21): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(459,21): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(461,13): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\ProyectoFinal\316156235_REPORTE8_GPO12.cpp(462,13): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
   ProyectoFinal.vcxproj -> C:\Users\Juli\Desktop\REPOSITORIO\316156235_PROYECTO_GPO12\ProyectoFinal\Debug\ProyectoFinal.exe

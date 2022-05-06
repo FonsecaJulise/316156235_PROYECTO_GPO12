@@ -59,7 +59,7 @@ int main()
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 
     // Create a GLFWwindow object that we can use for GLFW's functions
-    GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "316156235_REPORTE10_GPO12", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "316156235_REPORTE11_GPO12", nullptr, nullptr);
 
     if (nullptr == window)
     {
@@ -124,6 +124,9 @@ int main()
 
     //casa
     Model casa((char*)"Models/casa/casaCompleta.obj");
+
+    //perchero
+    Model mesa((char*)"Models/Mesa/Mesa.obj");
 
     glm::mat4 projection = glm::perspective(camera.GetZoom(), (float)SCREEN_WIDTH / (float)SCREEN_HEIGHT, 0.1f, 100.0f);
 
@@ -295,6 +298,12 @@ int main()
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         glBindVertexArray(VAO);
         cajon.Draw(lightingShader);
+
+        //perchero
+        model = glm::mat4(1);
+        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        glBindVertexArray(VAO);
+        mesa.Draw(lightingShader);
 
         //BuroVerde
         /*glm::mat4 model(1);
