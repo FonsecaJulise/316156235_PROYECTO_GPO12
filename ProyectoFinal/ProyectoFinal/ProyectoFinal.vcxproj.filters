@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="316156235_REPORTE8_GPO12.cpp">
+    <ClCompile Include="ProyectoFinal.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
@@ -24,6 +24,18 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,6 +50,18 @@
       <Filter>Archivos de origen</Filter>
     </None>
     <None Include="Shaders\lighting.vs">
+      <Filter>Archivos de origen</Filter>
+    </None>
+    <None Include="Shaders\modelLoading.frag">
+      <Filter>Archivos de origen</Filter>
+    </None>
+    <None Include="Shaders\modelLoading.vs">
+      <Filter>Archivos de origen</Filter>
+    </None>
+    <None Include="Shaders\SkyBox.frag">
+      <Filter>Archivos de origen</Filter>
+    </None>
+    <None Include="Shaders\SkyBox.vs">
       <Filter>Archivos de origen</Filter>
     </None>
   </ItemGroup>

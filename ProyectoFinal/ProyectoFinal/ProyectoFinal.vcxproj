@@ -19,17 +19,25 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="316156235_REPORTE8_GPO12.cpp" />
+    <ClCompile Include="ProyectoFinal.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\lamp.frag" />
     <None Include="Shaders\lamp.vs" />
     <None Include="Shaders\lighting.frag" />
     <None Include="Shaders\lighting.vs" />
+    <None Include="Shaders\modelLoading.frag" />
+    <None Include="Shaders\modelLoading.vs" />
+    <None Include="Shaders\SkyBox.frag" />
+    <None Include="Shaders\SkyBox.vs" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
