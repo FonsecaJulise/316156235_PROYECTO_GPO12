@@ -1,11 +1,25 @@
-newmtl cajon:lambert5SG
+newmtl Mesa:initialShadingGroup
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd mantel.png
+Ni 1.00
+newmtl Mesa:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd mesa.png
+Ni 1.00
+newmtl cajon1:lambert5SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd buro2.png
 Ni 1.00
-newmtl cuerpoBuro2:lambert2SG
+newmtl cuerpoBuro3:lambert2SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
@@ -14,9 +28,10 @@ map_Kd buro2.png
 Ni 1.00
 newmtl initialShadingGroup
 illum 4
-Kd 0.50 0.50 0.50
+Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
+map_Kd vidrio.png
 Ni 1.00
 newmtl lambert5SG
 illum 4
@@ -290,6 +305,468 @@ Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd casaExterior.png
 Ni 1.00
+newmtl lambert56SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd casaExterior.png
+Ni 1.00
+newmtl lambert57SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd casaExterior.png
+Ni 1.00
+newmtl lambert58SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd casaExterior.png
+Ni 1.00
+newmtl lambert59SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd marcos_Puerta.png
+Ni 1.00
+newmtl lambert60SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd marcos_Puerta.png
+Ni 1.00
+newmtl lambert61SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd casaExterior.png
+Ni 1.00
+newmtl lambert63SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd techo.png
+Ni 1.00
+newmtl lambert64SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd puerta.png
+Ni 1.00
+newmtl lambert66SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalpiso.png
+Ni 1.00
+newmtl lambert68SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalpiso.png
+Ni 1.00
+newmtl lambert69SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalpiso.png
+Ni 1.00
+newmtl lambert75SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalCasa.png
+Ni 1.00
+newmtl lambert76SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalCasa.png
+Ni 1.00
+newmtl lambert77SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalCasa.png
+Ni 1.00
+newmtl lambert78SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalCasa.png
+Ni 1.00
+newmtl lambert79SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalCasa.png
+Ni 1.00
+newmtl lambert80SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalCasa.png
+Ni 1.00
+newmtl lambert81SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalCasa.png
+Ni 1.00
+newmtl lambert83SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalTecho.png
+Ni 1.00
+newmtl lambert84SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalTecho.png
+Ni 1.00
+newmtl lambert85SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalChimenea.png
+Ni 1.00
+newmtl lambert86SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd casaExterior.png
+Ni 1.00
+newmtl lambert87SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalVentanas.png
+Ni 1.00
+newmtl lambert88SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalVentanas.png
+Ni 1.00
+newmtl lambert89SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pinturaCasaDentro.png
+Ni 1.00
+newmtl lambert90SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd decoracionAdentro.png
+Ni 1.00
+newmtl lambert91SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd decoracionAdentro.png
+Ni 1.00
+newmtl lambert96SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd casaExterior.png
+Ni 1.00
+newmtl lambert97SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalCasa.png
+Ni 1.00
+newmtl lambert98SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pinturaCasaDentro.png
+Ni 1.00
+newmtl lambert99SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd casaExterior.png
+Ni 1.00
+newmtl lambert101SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pinturaCasaDentro.png
+Ni 1.00
+newmtl lambert102SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pinturaCasaDentro.png
+Ni 1.00
+newmtl lambert104SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalCasa.png
+Ni 1.00
+newmtl lambert105SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd marcos_Puerta.png
+Ni 1.00
+newmtl lambert107SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalCasa.png
+Ni 1.00
+newmtl lambert108SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalCasa.png
+Ni 1.00
+newmtl lambert109SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalCasa.png
+Ni 1.00
+newmtl lambert110SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd casaExterior.png
+Ni 1.00
+newmtl lambert111SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalpiso.png
+Ni 1.00
+newmtl lambert112SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd marcos_Puerta.png
+Ni 1.00
+newmtl lambert113SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd marcos_Puerta.png
+Ni 1.00
+newmtl lambert114SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd marcos_Puerta.png
+Ni 1.00
+newmtl lambert115SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd marcos_Puerta.png
+Ni 1.00
+newmtl lambert116SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pinturaCasaDentro.png
+Ni 1.00
+newmtl lambert117SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pinturaCasaDentro.png
+Ni 1.00
+newmtl lambert118SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalVentanas.png
+Ni 1.00
+newmtl lambert119SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd marcos_Puerta.png
+Ni 1.00
+newmtl lambert120SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd marcos_Puerta.png
+Ni 1.00
+newmtl lambert121SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd marcos_Puerta.png
+Ni 1.00
+newmtl lambert123SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalChimenea.png
+Ni 1.00
+newmtl lambert124SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd puerta.png
+Ni 1.00
+newmtl lambert125SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd banqueta.png
+Ni 1.00
+newmtl lambert126SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd techo.png
+Ni 1.00
+newmtl lambert127SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd techo.png
+Ni 1.00
+newmtl lambert128SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalTecho.png
+Ni 1.00
+newmtl lambert129SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalTecho.png
+Ni 1.00
+newmtl lambert130SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pinturaCasaDentro.png
+Ni 1.00
+newmtl lambert131SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd vidrio.png
+Ni 1.00
+newmtl lambert132SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd decoracionAdentro.png
+Ni 1.00
+newmtl lambert133SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd vidrio.png
+Ni 1.00
+newmtl lambert134SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd techo.png
+Ni 1.00
+newmtl lambert135SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd decoracionAdentro.png
+Ni 1.00
+newmtl lambert136SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaFinalpiso.png
+Ni 1.00
+newmtl lambert138SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd piso.png
+Ni 1.00
+newmtl lampara:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd lampara.png
+Ni 1.00
 newmtl percheroMaya:lambert6SG
 illum 4
 Kd 0.00 0.00 0.00
@@ -297,7 +774,25 @@ Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd cafePerchero.jpg
 Ni 1.00
-newmtl silla:lambert2SG
+newmtl phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl phong2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd escalera.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks AmbientOcclusionMap_(1).png
+Ns 18.00
+newmtl silla1:lambert2SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00

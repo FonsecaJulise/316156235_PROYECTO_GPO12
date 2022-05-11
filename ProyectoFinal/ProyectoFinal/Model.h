@@ -207,7 +207,7 @@ private:
 	}
 };
 
-GLint TextureFromFile(const char *path, string directory)
+GLint TextureFromFile(const char* path, string directory)
 {
 	//Generate texture ID and load texture data
 	string filename = string(path);
@@ -217,7 +217,7 @@ GLint TextureFromFile(const char *path, string directory)
 
 	int width, height;
 
-	unsigned char *image = SOIL_load_image(filename.c_str(), &width, &height, 0, SOIL_LOAD_RGB);
+	unsigned char* image = SOIL_load_image(filename.c_str(), &width, &height, 0, SOIL_LOAD_RGB);
 
 	// Assign texture to ID
 	glBindTexture(GL_TEXTURE_2D, textureID);
