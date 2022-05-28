@@ -44,10 +44,16 @@ bool anim;//puerta der Buro
 bool anim2;//puerta izq Buro
 bool anim3;//puerta Casa
 bool anim4;//prender lampara
+bool anim5;//puerta estufa
+bool anim6;//prender arribarefri
+bool anim7;//puerta abajo  refri
 float rot = 0.0f;//puerta der Buro
 float rot2 = 0.0f;//puerta izq Buro
 float rot3 = 0.0f;//puerta
 float rot4 = 0.0f;//colaPajaro
+float rot5 = 0.0f;//puertaEstufa
+float rot6 = 0.0f;//puerta arriba refri
+float rot7 = 0.0f;//puerta abajo refri
 glm::vec3 PosIni(-5.67f, 1.8f, -4.0f); //posicion inicial animacion buro2
 glm::vec3 PosIni2(5.0f, 16.5f, -6.4f); //posicion inicial animacion pajaro
 glm::vec3 PosIni3(15.0f, 0.0f, 12.0f); //posicion inicial pollo
@@ -137,7 +143,7 @@ int main()
 	glfwInit();
 	
 	// Create a GLFWwindow object that we can use for GLFW's functions
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "316156235_PROYECTO_GPO12", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "316156235_PROYECTO_GPO04", nullptr, nullptr);
 
 	if (nullptr == window)
 	{
@@ -219,6 +225,26 @@ int main()
 	Model gallina((char*)"Models/Gallina/gallina.obj");
 	//POLLO
 	Model pollo((char*)"Models/Gallina/pollo.obj");
+
+	//ALACENAS
+	Model alacenaDer((char*)"Models/Alacena/alacenaDer.obj");
+	Model alacenaIzq((char*)"Models/Alacena/alacenaIZq.obj");
+
+	//BANCOTALLER
+	Model bancoTaller((char*)"Models/BancoTaller/bancoSilla.obj");
+
+	//FREGADERO
+	Model fregadero((char*)"Models/Fregadero/fregadero.obj");
+
+	//ESTUFA
+	Model cuerpoEstufa((char*)"Models/Estufa/cuerpoEstufa.obj");
+	Model vidrioEstufa((char*)"Models/Estufa/vidrioEstufa.obj");
+	Model puertaEstufa((char*)"Models/Estufa/puertaEstufa.obj");
+
+	//REFRIGERADOR
+	Model cuerpoRefri((char*)"Models/Refrigerador/cuerpoRefri.obj");
+	Model puertaRefriArriba((char*)"Models/Refrigerador/puertaRefriArriba.obj");
+	Model puertaRefriAbajo((char*)"Models/Refrigerador/puertaRefriAbajo.obj");
 
 	// Set up vertex data (and buffer(s)) and attribute pointers
 	GLfloat vertices[] =
@@ -508,21 +534,17 @@ int main()
 		//Carga de modelo 
 
 		//BURO
-		/*glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.1f, 0.1f, 0.1f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.384f, 0.815f, 0.596f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 1.0f, 1.0f, 1.0f);
-		glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 256.0f);*/
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(4.1f, 1.3f, -10.5f));
+		model = glm::translate(model, glm::vec3(4.1f, 1.3f, -10.2f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		cuerpoBuro.Draw(lightingShader);
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(2.26f, 1.3f, -10.12f));
+		model = glm::translate(model, glm::vec3(2.26f, 1.3f, -9.82f));
 		model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		puertaDerBuro.Draw(lightingShader);
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(5.91f, 1.3f, -10.12f));
+		model = glm::translate(model, glm::vec3(5.91f, 1.3f, -9.82f));
 		model = glm::rotate(model, glm::radians(rot2), glm::vec3(0.0f, -1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		puertaIzqBuro.Draw(lightingShader);
@@ -557,10 +579,12 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 0.85);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		vidrio.Draw(lightingShader);
 		glDisable(GL_BLEND);  //Desactiva el canal alfa 
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		glBindVertexArray(0);
+	
 
 		//LAMPARA
 		model = glm::mat4(1);
@@ -634,16 +658,69 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		arbol.Draw(lightingShader);
 
-	
-		////POLLO
+	    //POLLO
 		model = glm::mat4(1);
 		model = glm::translate(model, PosIni3 + glm::vec3(movKitX3, 0, movKitZ3));
 		model = glm::rotate(model, glm::radians(rotKit3), glm::vec3(0.0f, 1.0f, 0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		pollo.Draw(lightingShader);
 
+		//ALACENA
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		alacenaDer.Draw(lightingShader);
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		alacenaIzq.Draw(lightingShader);
 
+		//BANCOTALLER
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		bancoTaller.Draw(lightingShader);
 
+		//FREGADERO
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		fregadero.Draw(lightingShader);
+
+		//CUERPOESTUFA
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		cuerpoEstufa.Draw(lightingShader);
+		//VIDRIOESTUFA
+		glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 0.85);
+		model = glm::rotate(model, glm::radians(rot4), glm::vec3(1.0f, 0.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		vidrioEstufa.Draw(lightingShader);
+		glDisable(GL_BLEND);  //Desactiva el canal alfa 
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		glBindVertexArray(0);
+		//PUERTAESTUFA
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-9.649f, 0.825f, -8.71f));
+		model = glm::rotate(model, glm::radians(rot4), glm::vec3(1.0f, 0.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		puertaEstufa.Draw(lightingShader);
+
+		//REFRI
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		cuerpoRefri.Draw(lightingShader);
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-11.1f, 2.2f, -0.12f));
+		model = glm::rotate(model, glm::radians(rot6), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		puertaRefriAbajo.Draw(lightingShader);
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-11.1f, 5.5f, -0.12f));
+		model = glm::rotate(model, glm::radians(rot7), glm::vec3(0.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		puertaRefriArriba.Draw(lightingShader);
 
 		glBindVertexArray(0);
 
@@ -1108,6 +1185,44 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 		}
 	}
 
+	if (keys[GLFW_KEY_H]) //animacion puerta estufa
+	{
+		anim5 = !anim5;
+		if (anim5)
+		{
+			rot4 = 90.0f;
+
+		}
+		else
+		{
+			rot4 = 0.0f;
+		}
+	}
+
+	if (keys[GLFW_KEY_J]) //animacion puerta refri arriba
+	{
+		anim6 = !anim6;
+		if (anim6)
+		{
+			rot6 = -90.0f;
+		}
+		else
+		{
+			rot6 = 0.0f;
+		}
+	}
+	if (keys[GLFW_KEY_K]) //animacion puerta refri arbajo
+	{
+		anim7 = !anim7;
+		if (anim7)
+		{
+			rot7 = -90.0f;
+		}
+		else
+		{
+			rot7 = 0.0f;
+		}
+	}
 }
 
 
